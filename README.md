@@ -16,7 +16,7 @@ Please follow the below instructions to run the test scripts.
 
 6. type the following command in Command Prompt
    
-   npm installed
+   npm install
    
    npx playwright test
    
