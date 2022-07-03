@@ -1,3 +1,15 @@
+Context:
+
+Playwright Version: 1.22.2
+
+Operating System: Windows
+
+Node.js version: 16.15.1
+
+Browser: Chrome
+
+
+
 Please follow the below instructions to run the test scripts.
 (If Node js installed in your system then go to step 3)
 
