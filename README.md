@@ -41,5 +41,6 @@ Please follow the below instructions to run the test scripts.
 7. Test result can be seen on browser executing the following command:
    
    npx playwright show-report
+   (Please click on the test results on the browser to get more details about the test steps. The screenshot section contains the screenshot of the test executed.)
 
 Note: If the code fails to run first time due to any firewall issue of node js then please re run the code after clicking on allow button of firewall popup.
