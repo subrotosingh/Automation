@@ -38,3 +38,4 @@ Please follow the below instructions to run the test scripts.
    
    npx playwright show-report
 
+Note: If the code fails to run first time due to any firewall issue of node js then please re run the code after clicking on allow button of firewall popup.
