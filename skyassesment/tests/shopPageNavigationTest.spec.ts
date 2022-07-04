@@ -41,15 +41,26 @@ test.describe(
        
       const signInputBox = await iFrame?.$('//input[@id="username"]');
 
-      await signInputBox?.fill("htuyoup@sky.uk");
+      let email: string = Math.random().toString(36).slice(2, 9);
+
+      await signInputBox?.fill(email + "@gmail.com");
 
       const submitButton = await iFrame?.$('//button[@aria-label="Identifier Submit Button"]');
-      console.log("submitButton---"+submitButton);
       await submitButton?.click({timeout: 1000});
-      
-      const heading = await iFrame?.$('h1');
 
-      console.log(heading?.innerText());
+      await iFrame?.waitForTimeout(5000);
+
+      const error = await iFrame?.$('//span[@id="error-desc"]');
+      const heading = await iFrame?.$('h1');
+      expect(heading).toBe("Create your My Sky password");
+
+      /* if(error === null){
+        const heading = await iFrame?.$('h1');
+        expect(heading).toBe("Create your My Sky password");
+      }else{
+        throw new Error("Please carefully check your details. If this problem continues, contact customer service.");
+      } */
+
     });
 
     // Scenario 3: User sees a list of deals on the deals page
