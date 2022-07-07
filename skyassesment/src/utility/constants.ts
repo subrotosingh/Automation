@@ -13,7 +13,7 @@ export class Constants {
 
   static dealsUrl = "https://www.sky.com/deals";
 
-  static skyQUrl = "https://www.sky.com/deals";
+  static skyQUrl = "https://www.sky.com/deals/sky-q";
 
   static skyQButton = '#root button:has-text("Sky Q")';
 
