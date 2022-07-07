@@ -11,6 +11,6 @@ export class Utils {
 
   static async generateRandomEmail(): Promise<string> {
     let randomString: string = Math.random().toString(36).slice(2, 9);
-    return `${randomString} +.gmail.com`;
+    return `${randomString}.gmail.com`;
   }
 }
