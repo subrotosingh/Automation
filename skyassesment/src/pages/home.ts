@@ -3,7 +3,7 @@ import { Constants } from "../utility/constants";
 export class HomePage {
   constructor() {
   }
-  static SEARCH_TEXT = "sky";
+  static SEARCH_TEXT: string = "sky";
   async verifySearchNavigation({ page }) {
     // go to search icon on the right upper corner of the home page and click
     await page
