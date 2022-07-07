@@ -19,7 +19,7 @@ test.describe(
     });
 
     // Scenario 2: User sees tiles on the shop page
-    test.only("verify the text 'Create your My Sky password' when user try to sign in with invalid credentials", async ({
+    test("verify the text 'Create your My Sky password' when user try to sign in with invalid credentials", async ({
       page,
     }) => {
       await new Deals().verifySignInWithInvalidCredentials({ page });
