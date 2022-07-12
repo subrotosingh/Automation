@@ -45,5 +45,7 @@ export class Constants {
 
   static headerOne: string = "h1";
 
+  static createPasswordTitle: string = 'h1:has-text("Create your My Sky password")';
+
   static createMyPasswordText: string = "Create your My Sky password";
 }

@@ -3,7 +3,7 @@ import { Constants } from "../utility/constants";
 import { Utils } from "../utility/utils";
 
 export class Deals {
-  constructor() {}
+  constructor() { }
 
   async verifyDealsPageNavigation({ page }) {
     // Go To Deals
@@ -54,14 +54,12 @@ export class Deals {
     await submitButton?.click({ timeout: 1000 });
     await iFrame?.waitForTimeout(5000);
     const error = await iFrame?.$(Constants.errorDescSpan);
-    const heading = await iFrame?.$(Constants.headerOne);
-    expect(heading).toBe(Constants.createMyPasswordText);
 
-    /* if(error === null){
-        const heading = await iFrame?.$('h1');
-        expect(heading).toBe("Create your My Sky password");
-      }else{
-        throw new Error("Please carefully check your details. If this problem continues, contact customer service.");
-      } */
+    if (error === null) {
+      const heading = await iFrame.locator(Constants.createPasswordTitle);
+      expect(heading).toHaveText(Constants.createMyPasswordText);
+    } else {
+      throw new Error("Please carefully check your details. If this problem continues, contact customer service.");
+    }
   }
 }
